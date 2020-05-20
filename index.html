@@ -7,7 +7,9 @@
 </head>
 <body>
 <div id="result"></div>
-<a id="appLink"></a>
+<a id="anroidAppLink" href="https://play.google.com/store/apps/details?id=com.tonetag.mywallet"></a>
+	
+<a id="iosAppLink" href="https://apps.apple.com/ua/app/oyeti/id1465564187"></a>
 <script type="text/javascript">
 
 	var userAgent = window.navigator.userAgent.toLowerCase();
@@ -18,8 +20,8 @@
         mobileOS = "Android";
 	     // alert("This is Android");
 	     document.getElementById("result").innerHTML ="Android";
-       $("#appLink").attr("href","https://play.google.com/store/apps/details?id=com.tonetag.mywallet");
-      $("#appLink").trigger("click");
+       
+      $("#anroidAppLink").trigger("click");
     }
 
     //check is mobile os is ios
@@ -27,8 +29,8 @@
       mobileOS = "iOS";
 	     // alert("This is IOS");
 	      document.getElementById("result").innerHTML ="IOS";
-        $("#appLink").attr("href","https://apps.apple.com/ua/app/oyeti/id1465564187");
-        $("#appLink").trigger("click");
+        
+        $("#iosAppLink").trigger("click");
       }
       
 </script>
