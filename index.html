@@ -1,40 +1,22 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>OS Checker</title>
-  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-</head>
-<body>
-<div id="result"></div>
-<!-- <a id="anroidAppLink" href="https://play.google.com/store/apps/details?id=com.tonetag.mywallet">Android Link</a>
-	
-<a id="iosAppLink" href="https://apps.apple.com/ua/app/oyeti/id1465564187">IOS Link</a> -->
-<script type="text/javascript">
-
-	var userAgent = window.navigator.userAgent.toLowerCase();
+<!DOCTYPE html>
+<html>
+  <body>
+  <h1>Transaction</h1>
+  <script type="text/javascript">
+    //var status_id = <%= @status_id %>
+    //window.location.href="intent://invoice/#Intent;scheme=apay;package=com.tonetag.mywallet;S.callback=<%=@status_id%>;end";
+    var userAgent = window.navigator.userAgent.toLowerCase();
+   // alert(userAgent);
     var mobileOS;
-
-    //check is mobile os is android
-    if (/android/i.test(userAgent)) {
-        mobileOS = "Android";
-	     // alert("This is Android");
-	     document.getElementById("result").innerHTML ="Android";
-       
-      //$("#anroidAppLink").trigger("click");
-	    window.open("https://play.google.com/store/apps/details?id=com.tonetag.mywallet");
-    }
-
-    //check is mobile os is ios
     if (/iphone|ipod|ipad/.test(userAgent)) {
       mobileOS = "iOS";
-	     // alert("This is IOS");
-	      document.getElementById("result").innerHTML ="IOS";
-        
-        //$("#iosAppLink").trigger("click");
-	     window.open("https://apps.apple.com/ua/app/oyeti/id1465564187");
-      }
-      
-</script>
-</body>
+     // alert(userAgent + mobileOS);
+      window.location.href="https://apps.apple.com/ua/app/oyeti/id1465564187";
+    } else {
+    	 mobileOS = "iOS";
+     // alert(userAgent + mobileOS);
+      window.location.href="https://play.google.com/store/apps/details?id=com.tonetag.mywallet";
+    }
+  </script>
+  </body>
 </html>
